@@ -9,7 +9,32 @@ class TreeNode {
 class BinaryTree {
     constructor() {
         this.root = null;
-    }    
+    }
+    
+    insertOrder(data) {
+        if (!this.root) {
+            this.root = new TreeNode(data);
+            return;
+        }
+        let p = this.root;
+
+        while (p) { 
+            if (!p.left) {
+                p.left = new TreeNode(data);
+                return;
+            } else if (!p.right) {
+                p.right = new TreeNode(data);
+                return;
+            } else {
+                if (p.left) {
+                    p = p.left;
+                } else if (p.right) {
+                    p = p.right;
+                }
+            }
+        
+        }   
+    }
 
     insert(data) {
         if (!this.root) {
@@ -115,11 +140,13 @@ const a = new BinaryTree();
 //a.insert(40);
 //a.insert(55);
 
-a.insert2(10);
-a.insert2(9);
-a.insert2(20);
-a.insert2(1);
+//a.insert2(10);
+//a.insert2(9);
+//a.insert2(20);
+//a.insert2(1);
 
-console.log('lookup:' + a.lookup(20));
+//console.log('lookup:' + a.lookup(20));
 
-a.printAll();
+//a.printAll();
+
+module.exports = BinaryTree 

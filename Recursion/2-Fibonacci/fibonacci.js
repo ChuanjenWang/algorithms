@@ -1,3 +1,4 @@
+let counter = 0;
 /**
  * Time:  O(2^n)) 
  * Space: O(1)
@@ -44,6 +45,7 @@ function memorizer (fn) {
     let cache = {};
 
     return function(...args) {
+        counter++;
         if (cache[args]) {
             return cache[args];
         } else {
@@ -55,6 +57,7 @@ function memorizer (fn) {
     }
 }
 
-//console.log(memorizer(slowFib(43)));
+console.log(memorizer(mFib(30)));
+
 
 module.exports = memorizer(slowFib);
