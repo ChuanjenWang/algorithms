@@ -21,7 +21,7 @@ var inorderTraversal = function(root) {
         }
         p = arr.pop();
         res.push(p.val);
-        //console.log(res);
+        
         p = p.right; 
     }
     
