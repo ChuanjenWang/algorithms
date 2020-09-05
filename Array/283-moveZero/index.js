@@ -19,7 +19,8 @@ var moveZeroes = function(nums) {
             i++;
         }
     }
-    nums.splice(nums.length - 1 - counter, 1);
+    //nums.splice(nums.length - 1 - counter, 1);
+    nums.splice(i ,1);
 
     return nums;
 };

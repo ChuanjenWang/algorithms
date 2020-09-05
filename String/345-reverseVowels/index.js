@@ -5,7 +5,7 @@
 var reverseVowels = function(s) {
     let arr = s.split('');
     let start = 0;
-    let end = s.length -1;
+    let end = s.length - 1;
     
     while (start < end) {
         while (!isVowels(arr[start]) && start < end) {

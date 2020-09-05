@@ -31,7 +31,7 @@ function chunk2(array, num) {
 }
 
 const arr = [1,2,3,4,5,6,7];
-const a = chunk2(arr, 4);
+const a = chunk2(arr, 2);
 
 console.log(a);
 
